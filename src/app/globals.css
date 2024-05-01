@@ -31,6 +31,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  background-size:auto;
+  background-color:hsla(120,0%,0%,1);
+background-image:
+radial-gradient(at 50% 54%, hsla(335,100%,37%,0.31) 0px, transparent 50%),
+radial-gradient(at 100% 100%, hsla(184,100%,37%,0.34) 0px, transparent 50%),
+radial-gradient(at 7% 23%, hsla(266,100%,37%,0.45) 0px, transparent 50%);
+background-repeat: repeat-y
+} 
+
+
   .header-links li span {
     position: relative;
     z-index: 0;

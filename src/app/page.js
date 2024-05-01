@@ -1,39 +1,36 @@
-import Footer from "./components/footer";
-import HeroSection from "./components/myhero";
+"use client";
+import Footer from "./components/Footer";
+import HeroSection from "./components/Myhero";
 
-import Navbar from "./components/navbar";
-import Design from "./components/design";
-import Cards from "./components/cards";
-import Book from "./components/bookcall";
-// import About from "./components/aboutus";
+import Designbox_data from "./Designbox_data";
+import DesignCarousal from "./components/Design_Carousal_section";
 
-
-
+import Book from "./components/Bookcall";
+import DesignBox from "./components/Design_box";
 import React from "react";
-import PartnerCompanies from "./components/partner";
-import Mobilenavbar from "./components/mobilenavbar";
-
-
+import PartnerCompanies from "./components/Partner";
+import DisplayBoxes from "./components/DisplayBoxes";
 
 export default function Page() {
   return (
-    
-    
-    
     <div>
-      <Navbar />
-      <div className="min-h-screen ">
+      <div className="min-h-screen">
         <HeroSection />
-        <PartnerCompanies />
-        
       </div>
-      <Design/>
-      <Cards/>
-      <Book/>
-      {/* <Mobilenavbar/> */}
-      {/* <About/> */}
+      <PartnerCompanies />
+      <DesignCarousal />
+      <div className="flex my-[10rem] flex-col sm:p-4 justify-center  ">
+        <DesignBox />
+        <div>
+          {Designbox_data.map((item) => {
+            return (
+              <DisplayBoxes index={item.id} head={item.head} text={item.text} />
+            );
+          })}
+        </div>
+      </div>
+      <Book />
       <Footer />
-      
     </div>
   );
-};
+}

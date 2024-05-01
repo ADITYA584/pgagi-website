@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '@/app/components/navbar'; // Adjust the import path according to your file structure
-import Footer from '@/app/components/footer'; // Adjust the import path according to your file structure
+import Footer from '@/app/components/Footer'; // Adjust the import path according to your file structure
 import '../src/app/globals.css';
 import Image from 'next/image';
 
