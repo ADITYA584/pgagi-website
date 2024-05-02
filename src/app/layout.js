@@ -1,13 +1,15 @@
 import { Inter } from "next/font/google";
 import Head from "next/head"; // Import Head component
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "PG-AGI",
-  description: "At PGAGI, we believe in a future where AI and human intelligence coexist in harmony, creating a world that is smarter, faster, and better. We are not just building AI. we are shaping a future where AI is a fundamental and positive force for businesses.",
-  tag: "hello2"
+  description:
+    "At PGAGI, we believe in a future where AI and human intelligence coexist in harmony, creating a world that is smarter, faster, and better. We are not just building AI. we are shaping a future where AI is a fundamental and positive force for businesses.",
+  tag: "hello2",
 };
 
 export default function RootLayout({ children }) {
@@ -19,7 +21,11 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <meta name="tag" content={metadata.tag} />
       </Head>
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
