@@ -1,5 +1,5 @@
 "use client";
-import Footer from "./components/Footer";
+import Footer from "./components/footer";
 import HeroSection from "./components/Myhero";
 
 import Designbox_data from "./Designbox_data";
